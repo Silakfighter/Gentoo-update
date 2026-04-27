@@ -1,0 +1,19 @@
+/**
+ * Gentoo Power Menu Mode
+ * Integrates cleanly with your existing Rofi theme and colors
+ */
+
+configuration {
+    display-power: " Power Menu";
+}
+
+@theme "~/.config/rofi/config.rasi"
+
+mode "power" {
+    entries: [
+        {label: "  Reboot", action: "systemctl reboot"},
+        {label: "  Power Off", action: "systemctl poweroff"},
+        {label: "  Logout", action: "bspc quit"}
+    ];
+}
+

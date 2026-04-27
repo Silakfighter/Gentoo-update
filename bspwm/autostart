@@ -1,0 +1,52 @@
+#!/bin/bash
+# Set default cursor
+#------------------------------
+# Essentials
+# -----------------------------
+xrdb -merge ~/.Xresources
+ibus-daemon -rxRd
+gentoo-pipewire-launcher &
+env | grep -E '^(DISPLAY|DBUS_SESSION_BUS_ADDRESS)=' > ~/.Xdbus
+chmod 600 ~/.Xdbus
+
+# -----------------------------
+# Notifications and cursor
+# -----------------------------
+unclutter &
+
+# -----------------------------
+# Wallpaper
+# -----------------------------
+feh --bg-scale ~/Wallpapers/wallpaper.png &  # set wallpaper
+
+# -----------------------------
+# Audio daemon
+# -----------------------------
+playerctld daemon &
+
+# -----------------------------
+# Polybar
+# -----------------------------
+${HOME}/.config/polybar/launch.sh &
+
+# -----------------------------
+# Picom for transparency
+# -----------------------------
+#picom --daemon &
+dunst &
+
+# -----------------------------
+# System tray
+# -----------------------------
+sleep 0.5  # wait for Polybar to start
+trayer --edge top \
+       --align right \
+       --widthtype request \
+       --padding 0 \
+       --SetDockType true \
+       --SetPartialStrut true \
+       --expand true \
+       --transparent true \
+       --tint 0x2e3440 \
+       --height 26 &
+
