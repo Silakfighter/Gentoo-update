@@ -1,0 +1,2 @@
+dev-util/glslang -lto
+dev-cpp/highway -lto

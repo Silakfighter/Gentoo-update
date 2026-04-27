@@ -1,0 +1,2 @@
+COMMON_FLAGS="\${COMMON_FLAGS} -flto=thin"
+LDFLAGS="\${LDFLAGS} -flto=thin -Wl,--lto-O3"

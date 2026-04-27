@@ -1,0 +1,29 @@
+dev-util/spirv-tools static-libs
+# required by sys-libs/ncurses-6.5_p20251220::gentoo[gpm]
+# required by www-client/w3m-0.5.6::gentoo
+# required by virtual/w3m-1::gentoo
+# required by app-text/xmlto-0.0.28-r11::gentoo[text]
+# required by x11-misc/xdg-utils-1.2.1-r10::gentoo
+# required by x11-misc/dunst-1.13.1::gentoo[xdg]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/gpm-1.20.7-r6 abi_x86_32
+# required by dev-libs/libxml2-2.15.2-r1::gentoo[icu]
+# required by llvm-core/clang-22.1.1::gentoo[xml]
+# required by @system
+# required by @world (argument)
+>=dev-libs/icu-78.3 abi_x86_32
+# required by media-libs/mesa-26.0.3::gentoo[vulkan,-video_cards_asahi,-video_cards_nvk,video_cards_intel,-opencl]
+# required by media-libs/libsdl2-2.32.10::gentoo[gles2]
+# required by media-video/ffmpeg-8.1::gentoo[sdl]
+# required by www-client/firefox-149.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=llvm-core/libclc-22.1.2 spirv
+# required by media-libs/mesa-26.0.3::gentoo[vulkan,-video_cards_asahi,-opencl,video_cards_intel,-video_cards_nvk]
+# required by media-libs/libsdl2-2.32.10::gentoo[gles2]
+# required by media-video/ffmpeg-8.1::gentoo[sdl]
+# required by www-client/firefox-149.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=llvm-core/libclc-21.1.8 spirv

@@ -1,0 +1,1 @@
+COMMON_FLAGS="-march=alderlake -mabm -mno-kl -mno-pconfig -mno-sgx -mno-widekl -mshstk --param=l1-cache-line-size=64 --param=l1-cache-size=48 --param=l2-cache-size=24576"

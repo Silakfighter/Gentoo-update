@@ -1,0 +1,6 @@
+# Disable AVX-512 at the Preprocessor level for Highway
+MY_AVX_FLAGS="-mno-avx512f -mno-avx512vl -mno-avx512dq -mno-avx512bw -mno-avx512cd"
+MY_HWY_DEFS="-DHWY_COMPILE_ONLY_STATIC -DHWY_DISABLED_TARGETS=HWY_ALL_AVX3"
+
+CFLAGS="${CFLAGS} ${MY_AVX_FLAGS}"
+CXXFLAGS="${CXXFLAGS} ${MY_AVX_FLAGS} ${MY_HWY_DEFS}"

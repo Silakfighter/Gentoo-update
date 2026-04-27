@@ -1,0 +1,3 @@
+# Use LLVM's C++ library
+export CXXFLAGS="${CXXFLAGS} -stdlib=libc++"
+export LDFLAGS="${LDFLAGS} -stdlib=libc++"

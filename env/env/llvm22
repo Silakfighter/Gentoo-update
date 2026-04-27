@@ -1,0 +1,4 @@
+CC="clang-22"
+CXX="clang++-22"
+CXXFLAGS="${CXXFLAGS} -stdlib=libc++"
+LDFLAGS="${LDFLAGS} -stdlib=libc++"

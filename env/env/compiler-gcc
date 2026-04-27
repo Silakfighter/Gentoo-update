@@ -1,0 +1,12 @@
+#COMMON_FLAGS="-O2 -march=native"
+COMMON_FLAGS="-march=alderlake -mabm -mno-kl -mno-pconfig -mno-sgx -mno-widekl -mshstk --param=l1-cache-line-size=64 --param=l1-cache-size=48 --param=l2-cache-size=24576"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+LDFLAGS="-Wl,--as-needed"
+
+CC="gcc"
+CXX="g++"
+CPP="gcc -E"
+AR="ar"
+NM="nm"
+RANLIB="ranlib"
